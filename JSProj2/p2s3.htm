@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../JSProj.css" type="text/css" />
+        <title>Project 2 Script 3 by Tyler Kinney </title>
+    </head>
+    <body>
+        <h2>Project 2 Script 3</h2>
+    <script type = "text/javascript">
+        var firstNum, secondNum, thirdNum, smallNum, largeNum, numSum, numAvg, numProd, num1, num2, num3; 
+        firstNum = window.prompt( "Enter a first number:", "0");
+        secondNum = window.prompt("Enter a second number:","0");
+        thirdNum = window.prompt("Enter a third number:", "0");
+        num1 = parseInt(firstNum); 
+        num2 = parseInt(secondNum);
+        num3 = parseInt(thirdNum);
+        if (num1 < num2) {
+            if (num1 < num3) {
+                smallNum = num1
+            } else if (num2 < num3) {
+                smallNum = num2
+            } else {
+                smallNum = num3
+            }
+        } else if (num2 < num3) {
+            smallNum = num2
+        } else {
+            smallNum = num3
+        }
+        if (num1 > num2) {
+            if (num1 > num3) {
+                largeNum = num1
+            } else if (num2 > num3) {
+                largeNum = num2
+            } else {
+                largeNum = num3
+            }
+        } else if (num2 > num3) {
+            largeNum = num2
+        } else {
+            largeNum = num3
+        }
+        numSum = num1 + num2 + num3
+        numAvg = (num1 + num2 + num3)/3
+        numProd = num1 * num2 * num3
+        window.alert("The Sum is " + numSum + 
+        "\n The Average is " + numAvg + 
+        "\n The Product is " + numProd + 
+        "\n The Smallest Number is " + smallNum + 
+        "\n The Largest Number is " + largeNum);
+    </script>
+        <br><a href="menu.htm">Project 2 Menu</a>
+        <br><a href="../default.htm">COP2830 Home</a>
+    </body>
+</html>

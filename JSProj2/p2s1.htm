@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../JSProj.css" type="text/css" />
+        <title>Project 2 Script 1 by Tyler Kinney </title>
+    </head>
+    <body>
+        <h2>Project 2 Script 1</h2>
+    <script type = "text/javascript">
+        var firstNum, secondNum, num1, num2, num3, num4, num5, num6; // create needed variables
+        firstNum = window.prompt( "Enter a first number:", "0");
+        secondNum = window.prompt("Enter a second number:","0") // get user input
+        num1 = parseInt(firstNum); // take whatever the user input in firstNum and make it an integer in num1
+        num2 = parseInt(secondNum);
+        num3 = num1 + num2; // do whatever the project write-up asks for
+        document.writeln("<h3>The Sum = " + num3 + "</h3>" ); // write the line on the display
+        num4 = num1 * num2;
+        document.writeln("<h3>The Product = " + num4 + "</h3>");
+        num5 = num1 - num2;
+        document.writeln("<h3>The Difference = " + num5 + "</h3>");
+        num6 = num1 / num2;
+        document.writeln("<h3>The Quotient = " + num6 + "<h3>");
+    </script>
+    <br><a href="menu.htm">Project 2 Menu</a>
+    <br><a href="../default.htm">COP2830 Home</a>
+    </body>
+</html>

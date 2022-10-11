@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project 3 Scripts</title>
+    <script type="text/javascript">
+        function volSphere() {
+        var firstNum, sphereVol, volRad;
+        sphereVol = 0;
+        firstNum = window.prompt('Enter The Radius of the Sphere:', '0');
+        volRad = parseInt(firstNum);
+        sphereVol = 4/3 * Math.PI * volRad ** 2;
+        window.alert('Radius of the Sphere: ' + volRad +
+        '\n The Volume of the Sphere: ' + sphereVol);
+        }
+    </script>
+</head>
+<body>
+    <h1>Project 3 Script 2</h1>
+    <button type="button" onclick="volSphere()">
+    Calculate the Volume of a Sphere</button>
+    <br><a href="menu.htm">Project 3 Menu</a>
+    <br><a href="../default.htm">COP2830 Home</a>
+</body>
+</html>

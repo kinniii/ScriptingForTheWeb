@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project 3 Scripts</title>
+    <script type="text/javascript">
+        /*
+        This one confused me as when I linked to the form in my function
+        (toFarenheit(tempForm)) it would break, but it works as below? But in
+        the previous script linking to the form works. Not sure if I made
+        a mistake here or what but it worked on my end this way!
+        */
+        function toFarenheit(){
+           var convTemp = parseFloat(tempForm.temp.value);
+           tempForm.answer.value = (convTemp * 9/5) + 32;
+           document.getElementById('converted').innerHTML = 
+           'Converted From Celsius to Farenheit: ';
+        }
+        function toCelsius(){
+           var convTemp = parseFloat(tempForm.temp.value);
+           tempForm.answer.value = (convTemp - 32) * 5/9;
+           document.getElementById('converted').innerHTML = 
+           'Converted From Farenheit to Celsius: ';
+        }
+    </script>
+</head>
+<body>
+    <h1>Project 3 Script 5</h1>
+    <form id="tempForm" action="">
+        <label>Enter a Temperature to Convert:</label><br><br>
+        <input type="number" name="temp" required><br><br>
+        <button type="button" onclick="toFarenheit()">Convert to Farenheit</button>
+        <button type="button" onclick="toCelsius()">Convert to Celsius</button><br><br>
+        <label id="converted"></label><br><br>
+        <input type="text" name="answer">
+    </form>
+    <br><a href="menu.htm">Project 3 Menu</a>
+    <br><a href="../default.htm">COP2830 Home</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project 3 Scripts</title>
+    <script type="text/javascript">
+        function disctance(myForm){
+            var x1 = parseFloat(myForm.x1.value);
+            var y1 = parseFloat(myForm.y1.value);
+            var x2 = parseFloat(myForm.x2.value);
+            var y2 = parseFloat(myForm.y2.value);
+            var xdif = x2 - x1;
+            var ydif = y2 - y1;
+            myForm.answer.value = Math.pow((xdif * xdif + ydif * ydif), 0.5);
+        }
+    </script>
+</head>
+<body>
+    <h1>Project 3 Script 4</h1>
+    <form id="myForm" action="">
+        <h4>Point A</h4>
+        <label>(x1,</label><br>
+        <input type="number" name="x1" required><br>
+        <label >y1)</label><br>
+        <input type="number" name="y1" required><br>
+        <h4>Point B</h4>
+        <label>(x2,</label><br>
+        <input type="number" name="x2" required><br>
+        <label>y2)</label><br>
+        <input type="number" name="y2" required><br><br>
+        <button type="button" onclick="disctance(myForm)">Calculate Distance
+        </button><br><br>
+        <label>Answer:</label><br>
+        <input type="text" name="answer"><br><br>
+    </form>
+    <br><a href="menu.htm">Project 3 Menu</a>
+    <br><a href="../default.htm">COP2830 Home</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project 3 Scripts</title>
+    <script type="text/javascript">
+        function myBMW() {
+        var firstNum, secondNum, milesDriven, gasUsed, milesPerGallon;
+        milesPerGallon = 0;
+        firstNum = window.prompt('Enter The Miles Driven:', '0');
+        milesDriven = parseInt(firstNum);
+        secondNum = window.prompt('Enter The Gallons of Gas Used:', '0');
+        gasUsed = parseInt(secondNum);
+        milesPerGallon = milesDriven / gasUsed;
+        window.alert('Gallons Used: ' + gasUsed + '\n Miles Traveled: '
+        + milesDriven + '\n Miles Per Gallon: ' + milesPerGallon);
+        }
+    </script>
+</head>
+<body onload="myBMW()">
+    <h1>Project 3 Script 1</h1>
+    <br><a href="menu.htm">Project 3 Menu</a>
+    <br><a href="../default.htm">COP2830 Home</a>
+</body>
+</html>

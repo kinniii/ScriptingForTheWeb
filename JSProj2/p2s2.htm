@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../JSProj.css" type="text/css" />
+        <title>Project 2 Script 2 by Tyler Kinney </title>
+    </head>
+    <body>
+        <h2>Project 2 Script 2</h2>
+    <script type = "text/javascript">
+        var firstNum, secondNum, num1, num2; 
+        firstNum = window.prompt( "Enter a first number:", "0");
+        secondNum = window.prompt("Enter a second number:","0");
+        num1 = parseInt(firstNum); 
+        num2 = parseInt(secondNum);
+        if (num1 > num2) {
+            document.writeln("<h3>" + num1 + " is larger</h3>" )
+        } else if (num1 == num2) {
+            document.writeln("<h3>The numbers are equal</h3>")
+        } else {
+            document.writeln("<h3>" + num2 + " is larger</h3>")
+        } 
+    </script>
+        <br><a href="menu.htm">Project 2 Menu</a>
+        <br><a href="../default.htm">COP2830 Home</a>
+    </body>
+</html>
