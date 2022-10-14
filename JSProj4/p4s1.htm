@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 4 Script 1</title>
+</head>
+<body>
+    <h2>Project 4 Script 1</h2>
+    <p>Enter any valid date in the format of MM/DD/YY HH:MI:SS AM/PM<br>
+    For Example: 12/31/2022 12:59:59 PM
+    </p>
+    <script type="text/javascript">
+        function ConvertDate(myDate){
+        var inputDate = new Date( myDate );
+        dateForm.dateResults.value = "Date Entered: " + inputDate + "\n" + "\n" +
+        "String Methods: " + "\n" +
+        " toString: " + inputDate.toString() + "\n" +
+        " toLocaleString: " + inputDate.toLocaleString() + "\n" +
+        " toUTCString: " + inputDate.toUTCString() + "\n" +
+        " valueOf: " + inputDate.valueOf() + " milliseconds" + "\n" + "\n" +
+        "Get methods for date entered" + "\n" +
+        " getDate: " + inputDate.getDate() + "\n" +
+        " getDay: " + inputDate.getDay() + "\n" +
+        " getMonth: " + inputDate.getMonth() + " Note: off by 1" + '\n' +
+        " getFullYear: " + inputDate.getFullYear() + "\n" +
+        " getTime: " + inputDate.getTime() + "\n" +
+        " getHours: " + inputDate.getHours() + "\n" +
+        " getMinutes: " + inputDate.getMinutes() + "\n" +
+        " getSeconds " + inputDate.getSeconds() + "\n" +
+        " getMilliseconds: " + inputDate.getMilliseconds() + "\n" + "\n" +
+        "Set methods for changing date entered" + "\n" +
+        " setDate(31): "  + inputDate.setDate(31) + " Note: milliseconds" + "\n" +
+        " setMonth(11): " + inputDate.setMonth(11) + "\n" +
+        " setFullYear(2024): " + inputDate.setFullYear(2024) + "\n" +
+        " setHours(23): " + inputDate.setHours(23) + "\n" +
+        " setMinutes(59): " + inputDate.setMinutes(59) + "\n" +
+        " setSeconds(59): " + inputDate.setSeconds(59) + "\n" +
+        " Modified Date: " + inputDate.toString() + "\n" + "\n" +
+        "Here is the current date from the operating system: " + "\n" +
+        " Today's Date: " + new Date() + "\n" +
+        " Today's Date milliseconds - fraction of the current second: "
+    }
+    </script>
+    <form name="dateForm" action="">
+        <input type="text" name="userDate">
+        <input type="button" name="dateSubmit" value="Date Variations"
+        onclick="ConvertDate(userDate.value)"><br><br>
+        <textarea name="dateResults" id="dateREsults" cols="100" rows="30">
+        </textarea>
+    </form>
+    <p id="test"></p>
+</body>
+</html>
