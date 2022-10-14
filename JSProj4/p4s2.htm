@@ -19,11 +19,20 @@
         ];
         //Feel I did this a tad different than instructed but it clicked in my head
         function FlavorOfWeek(inputDate){
+            //Created the initial date
             var checkDate = new Date(inputDate);
+            /*I wrote in an id instead of ln to stop from reloading? Not Hoping not a bad thing
+            Write the date that was input
+            */
             document.getElementById('displayDate').innerHTML = "Input Date: "
             + checkDate.toString();
+            /*Use getDay to create a variable out of what day it is. It started at 0 for me
+            So I didn't need to -1
+            */
             var dayFlavor = checkDate.getDay();
+            //Throw that variable as the value of the array to get the fow
             let finalFlavor = flavors[dayFlavor];
+            //Once again we print that to our p element below
             document.getElementById('displayFow').innerHTML = "On " + checkDate.toUTCString() +
             ", the flavor of the day is " + finalFlavor;
         }
