@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 4 Script 2</title>
+</head>
+<body>
+    <h2>Project 4 Script 2</h2>
+    <script>
+
+        var flavors = [
+            "pineapple",
+            "apple",
+            "bananna",
+            "blackberry",
+            "lemon",
+            "pear",
+            "orange"
+        ];
+        //Feel I did this a tad different than instructed but it clicked in my head
+        function FlavorOfWeek(inputDate){
+            var checkDate = new Date(inputDate);
+            document.getElementById('displayDate').innerHTML = "Input Date: "
+            + checkDate.toString();
+            var dayFlavor = checkDate.getDay();
+            let finalFlavor = flavors[dayFlavor];
+            document.getElementById('displayFow').innerHTML = "On " + checkDate.toUTCString() +
+            ", the flavor of the day is " + finalFlavor;
+        }
+
+    </script>
+    <form name="dowForm" action="">
+        <p>Enter a Valid Date:</p>
+        <input name="dow" type="text"><br><br>
+        <input type="button" onclick="FlavorOfWeek(dow.value)" 
+        name="dowCurrent" value="Get Flavor of the Day">
+    </form><br><br>
+    <p id="displayDate"></p><br>
+    <p id="displayFow"></p>
+</body>
+</html>
