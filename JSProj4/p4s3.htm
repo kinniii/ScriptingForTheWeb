@@ -11,7 +11,12 @@
     </p>
     <script>
         function MathFun(int1,int2,int3,int4,str1,str2){
-            mathForm.infoResults.value = "User Input = Num1: " + int1 + int2 +int3+int4+str1+str2;
+            var
+            val1 = parseFloat(int1);
+            val2 = parseFloat(int2);
+            val3 = parseFloat(int3);
+            val4 = parseFloat(int4);
+            mathForm.infoResults.value = "User Input = Num1: " + val1 + ", Num2: " + val2;
         }
     </script>
     <form name="mathForm" action="">
