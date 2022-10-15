@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 4</title>
+</head>
+<body>
+    <h2>Project 4 Script 3</h2>
+    <p>Enter any valid number with several decimal places<br>
+    For Example: 12345.54321
+    </p>
+    <script>
+        function MathFun(int1,int2,int3,int4,str1,str2){
+            mathForm.infoResults.value = "User Input = Num1: " + int1 + int2 +int3+int4+str1+str2;
+        }
+    </script>
+    <form name="mathForm" action="">
+        <label for="num1">Num1:</label>
+        <input name="num1" type="text"><br>
+        <label for="num2">Num2:</label>
+        <input name="num2" type="text"><br>
+        <label for="num3">Num3:</label>
+        <input name="num3" type="text"><br>
+        <label for="num4">Num4:</label>
+        <input name="num4" type="text"><br><br>
+        <label for="text1">Text1:</label>
+        <input name="text1" type="text"><br>
+        <label for="text2">Text2:</label>
+        <input name="text2" type="text"><br><br>
+        <input name="enterVals" onclick="MathFun(num1.value,num2.value,num3.value,num4.value,
+        text1.value,text2.value)" value="Math, Booleans, Comparisons" type="button"><br><br>
+        <textarea name="infoResults" cols="100" rows="30"></textarea>
+    </form>
+</body>
+</html>
