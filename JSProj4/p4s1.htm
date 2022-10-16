@@ -12,6 +12,7 @@
     <script type="text/javascript">
         function ConvertDate(myDate){
         var inputDate = new Date( myDate );
+        var currentDate = new Date();
         dateForm.dateResults.value = "Date Entered: " + inputDate + "\n" + "\n" +
         "String Methods: " + "\n" +
         " toString: " + inputDate.toString() + "\n" +
@@ -37,8 +38,8 @@
         " setSeconds(59): " + inputDate.setSeconds(59) + "\n" +
         " Modified Date: " + inputDate.toString() + "\n" + "\n" +
         "Here is the current date from the operating system: " + "\n" +
-        " Today's Date: " + new Date() + "\n" +
-        " Today's Date milliseconds - fraction of the current second: "
+        " Today's Date: " + currentDate.toString() + "\n" +
+        " Today's Date milliseconds - fraction of the current second: " + currentDate.getSeconds()*1000;
     }
     </script>
     <form name="dateForm" action="">
@@ -47,7 +48,8 @@
         onclick="ConvertDate(userDate.value)"><br><br>
         <textarea name="dateResults" id="dateResults" cols="100" rows="30">
         </textarea>
-    </form>
-    <p id="test"></p>
+    </form><br><br>
+    <a href="menu.htm">Project 4 Home</a>
+    <br><a href="../default.htm">COP2830 Home</a>
 </body>
 </html>

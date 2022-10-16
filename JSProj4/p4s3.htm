@@ -6,7 +6,8 @@
 </head>
 <body>
     <h2>Project 4 Script 3</h2>
-    <p>Enter any valid number with several decimal places<br>
+    <p>
+    Enter any valid number with several decimal places<br>
     For Example: 12345.54321
     </p>
     <script>
@@ -16,7 +17,39 @@
             val2 = parseFloat(int2);
             val3 = parseFloat(int3);
             val4 = parseFloat(int4);
-            mathForm.infoResults.value = "User Input = Num1: " + val1 + ", Num2: " + val2;
+            data1 = str1;
+            data2 = str2;
+
+            mathForm.infoResults.value = "User Input = Num1: " + val1 + ", Num2: " + val2 +
+            ", Num3: " + val3 + ", Num4: " + val4 + ", Text1: " + data1 + ", Text2: " +
+            data2 + "\n" + "\n" +
+            "Math Properties - Constants" + "\n" + " Math.PI: " + Math.PI + "\n" + 
+            " Math.SQRT2: " + Math.SQRT2 + "\n" + "Math.SQRT1_2: " + Math.SQRT1_2 + "\n" +
+            "\n" + "Math Methods" + "\n" + " Math.round(Num1): " + Math.round(val1) + "\n" +
+            " Math.round(Num1, Num2): " + Math.round(val1, val2) + " (Note: still rounds to an integer, no decimals" +
+            "\n" + " Math.ceil(Num1) " + Math.ceil(val1) + "\n" + " Math.floor(Num1) " + Math.floor(val1) + "\n" + 
+            " Math.trunc(Num1): " + Math.trunc(val1) + "\n" + " Math.sign(Num1): " + Math.sign(val1) + "\n" +
+            " Math.pow(Num1, Num2): " + Math.pow(val1, val2) + "\n" + " Math.sqrt(Num1): " + Math.sqrt(val1) +
+            "\n" + " Math.abs(Num1): " + Math.abs(val1) + "\n" + " Math.min(Num1, Num2, Num3, Num4): " 
+            + Math.min(val1, val2, val3, val4) + "\n" + " Math.max(Num1, Num2, Num3, Num4): "
+            + Math.max(val1, val2, val3, val4) + "\n" + " Math.random()" + Math.random() + "\n" + "\n" +
+            "Additional Number Methods" + "\n" + " Num1.toFixed(2), round to 2 decimal places: " + val1.toFixed(2) +
+            "\n" + " Num1.toFixed(4), round to 4 decimal places: " + val1.toFixed(4) + "\n" + 
+            " Num1.toPrecision(2), truncate to 2 numbers: " + val1.toPrecision(2) + "\n" +
+            " Num1.toPrecision(4), truncate to 4 numbers: " + val1.toPrecision(4) + "\n" +
+            "Number.isNaN(Num1): " + Number.isNaN(val1) + " (Note: \"false\" = is a number, \"true\" = is NOT a number)" +
+            "\n" + "\n" + "Methods can be nested, methods used within methods" + "\n" + 
+            "For example, get the square root of any number, positive or negative," + "\n" +
+            "and round the result to two decimal places:" + "\n" + " Math.sqrt(Math.abs(-123.45678)).toFixed(2): " + 
+            Math.sqrt(Math.abs(-123.45678)).toFixed(2) + "\n" + "or generate a Random Number between 0 and 100:" +
+            "\n" + " Math.floor(Math.random() * 101): " + Math.floor(Math.random() * 101) + "\n" + "\n" +
+            "Booleans and Comparisons" + "\n" + " Boolean(Num1 > Num2): " + Boolean(val1 > val2) + "\n" +
+            " Boolean(Num1 < Num2): " + Boolean(val1 < val2) + "\n" + " Boolean(Num1 == Num2): " + 
+            Boolean(val1 == val2) + "\n" + " Boolean(Text1 > Text2): " + Boolean(data1 > data2) + "\n" +
+            " Boolean(Text1 < Text2): " + Boolean(data1 < data2) + "\n" + " Boolean(Text1 == Text2): " +
+            Boolean(data1 == data2);
+
+
         }
     </script>
     <form name="mathForm" action="">
@@ -35,6 +68,8 @@
         <input name="enterVals" onclick="MathFun(num1.value,num2.value,num3.value,num4.value,
         text1.value,text2.value)" value="Math, Booleans, Comparisons" type="button"><br><br>
         <textarea name="infoResults" cols="100" rows="30"></textarea>
-    </form>
+    </form><br>
+    <a href="menu.htm">Project 4 Home</a>
+    <br><a href="../default.htm">COP2830 Home</a>
 </body>
 </html>
