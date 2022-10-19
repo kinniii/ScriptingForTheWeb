@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 5</title>
+</head>
+<body>
+    <script>
+        var totalQty = 0, totalAmnt = 0, addToTotal = 0;
+        getProduct = window.prompt("Product Number (1 - 5, 0 to exit): ", "0");
+        userProduct = parseInt(getProduct);
+        while (userProduct != 0) {
+            userQty = window.prompt("Quantity Sold: ", "0");
+            numQty = parseInt(userQty);
+            totalQty = totalQty + numQty;
+            switch (userProduct) {
+                case 1: totalAmnt = totalAmnt + (2.98 * numQty);
+                break;
+
+                case 2: totalAmnt = totalAmnt + (4.5 * numQty);
+                break;
+
+                case 3: totalAmnt = totalAmnt + (9.98 * numQty);
+                break;
+
+                case 4: totalAmnt = totalAmnt + (4.49 * numQty);
+                break;
+
+                case 5: totalAmnt = totalAmnt + (6.87 * numQty);
+            }
+            getProduct = window.prompt("Product Number (1 - 5, 0 to exit): ", "0");
+            userProduct = parseInt(getProduct);
+        }
+        document.writeln("Total Quantity Sold: " + totalQty + "<br><br>");
+        document.writeln("Total Amount Sold: " + totalAmnt);
+    </script>
+    <h2>Project 5 Script 2</h2>
+</body>
+</html>
