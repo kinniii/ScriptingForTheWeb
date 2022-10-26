@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 6</title>
+    <link rel="stylesheet" href="../JSProj.css">
+</head>
+<body>
+    <h2>Project 6 Script 1</h2>
+    <form action="">
+        <img class="colorCodesImg" id="myImage" name="myImage" src="../JSImages/colorCodes1.gif" alt=""><br>
+        <input type="button" name="changeButton" onclick="changeImage()" value="Change Image">
+        <input type="button" name="changeBackButton" onclick="changeImageBack()" value="Change Image Back"><br><br>
+        <img class="mouseOverImg" id="myOverImage" onmouseover="mouseOver()" onmouseout="mouseOut()" src="../JSImages/mouseOver1.jpg"><br>
+        <label for="myOverImage" id="overImageLabel">I love the beach.</label>
+    </form><br>
+    <script>
+        function changeImage() {
+            document.getElementById("myImage").src = "../JSImages/colorCodes2.gif";
+        }
+
+        function changeImageBack() {
+            document.getElementById("myImage").src = "../JSImages/colorCodes1.gif";
+        }
+
+        function mouseOver() {
+            document.getElementById("myOverImage").focus();
+            document.getElementById("myOverImage").src = "../JSImages/mouseOver2.jpg";
+            document.getElementById("overImageLabel").innerHTML = "I also love the mountains.";
+        }
+
+        function mouseOut() {
+            document.getElementById("myOverImage").focus();
+            document.getElementById("myOverImage").src = "../JSImages/mouseOver1.jpg";
+            document.getElementById("overImageLabel").innerHTML = "I love the beach.";
+        }
+    </script>
+    <a href="menu.htm">Project 6 Menu</a><br>
+    <a href="../default.htm">COP2830 Home</a>
+</body>
+</html>

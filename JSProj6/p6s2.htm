@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 6</title>
+</head>
+<body>
+    <h2>Project 6 Script 2</h2>
+    <form action="">
+        <label >Enjoy the Show</label><br><br>
+        <img name="showImages" id="intervalImages" src="../JSImages/img01.jpg"><br>
+        <label id="showImagesLabel" for="showImages"></label><br>
+        <input type="button" name="stopTime" onclick="clearInterval(myInterveral)" value="Stop Time Interval">
+    </form><br>
+    <script>
+        var time = new Date(), 
+        myInterveral = setInterval(myTimer, 5000),
+        /* I decided to start my counter at 2 to make sure we see the first image for 5 seconds and then the second
+        right out the gate
+        */
+        x = 2;
+        document.getElementById('showImagesLabel').innerHTML = time.toLocaleTimeString();
+        function myTimer() {
+            if(x <= 6) {
+                document.getElementById('intervalImages').src = "../JSImages/img0" + x + ".jpg";
+                var time = new Date();
+                document.getElementById('showImagesLabel').innerHTML = time.toLocaleTimeString();
+                x += 1;
+            }else{
+                /*
+                I handled this by, once the counter is at 7 it will revert to the first image,
+                reset the date and time as always
+                and then restart our counter at the 2 postion to restart what we did above
+                */
+                document.getElementById('intervalImages').src = "../JSImages/img01.jpg";
+                var time = new Date();
+                document.getElementById('showImagesLabel').innerHTML = time.toLocaleTimeString();
+                x = 2;
+            }
+        }
+    </script>
+    <a href="menu.htm">Project 6 Menu</a><br>
+    <a href="../default.htm">COP2830 Home</a>
+</body>
+</html>

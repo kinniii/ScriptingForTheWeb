@@ -75,3 +75,40 @@ h1 {
 footer {
     padding: 20px;
 }
+
+.colorCodesImg {
+    width: 200;
+    height: 50;
+}
+
+.mouseOverImg {
+    width: 570;
+    height: 370;
+}
+
+.p6s3Form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.p6s3Form label, input {
+    display: inline-block;
+}
+
+.p6s3Form label {
+    width: 30%;
+    text-align: right;
+}
+
+.p6s3Form label + input {
+    width: 30%;
+    margin: 0 30% 0 4%;
+}
+
+.p6s3Form input + input {
+    float: right;
+}
+
+.buttonHolder {
+    text-align: center;
+}

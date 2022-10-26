@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 6</title>
+    <link rel="stylesheet" href="../JSProj.css">
+</head>
+<body>
+    <h2 class="center">Project 6 Script 3</h2>
+    <form name="myForm" class="p6s3Form" action="p6.s3A.htm" 
+    onsubmit="return validateForm(inputName.value,inputAmount.value)" method="post">
+        <p class="center">Data Validation</p>
+        <label for="invoiceDate">Invoice Date: </label>
+        <input name="invoiceDate" id="invoiceDate" type="text"><br><br>
+        <label for="net30">Net30: </label>
+        <input name="net30" id="net30" type="text"><br><br>
+        <label for="inputName">Name: </label>
+        <input type="text" name="inputName"><br><br>
+        <label for="inputAmount">Amount: </label>
+        <input name="inputAmount" id="inputAmount" type="text"><br><br>
+        <div class="buttonHolder">
+            <input type="submit" value="Sumbit"><br><br>
+        </div>
+        <textarea name="returnErrors" id="returnErrors" cols="90" rows="5"></textarea>
+    </form>
+    <script>
+        function validateForm(myName,myAmount) {
+            const d = new Date(document.forms["myForm"]["invoiceDate"].value);
+            var md = d.valueOf(),
+            errorFlag = 0;
+            // I added the code below to not clog the text box on multiple failed entries
+            myForm.returnErrors.value = "";
+            if(isNaN(md)) {
+                myForm.returnErrors.value += "* - Invalid Date" + "\n";
+                errorFlag = 1;
+            } else {
+                d.setDate(d.getDate() + 30);
+                document.getElementById('net30').value = d.toLocaleDateString();
+            }
+            if(myName == ''){
+                myForm.returnErrors.value += "* - Name is Required" + "\n";
+                errorFlag = 1;
+            }
+            if(isNaN(myAmount) || myAmount < 0 || myAmount == null || myAmount == ''){
+                myForm.returnErrors.value += "* - Invoice Amount Must be a number" + "\n";
+                errorFlag = 1;
+            }
+            if(errorFlag != 0){
+                return false;
+            }
+        }
+    </script>
+    <div class="center">
+        <a href="menu.htm">Project 6 Menu</a><br>
+        <a href="../default.htm">COP2830 Home</a>
+    </div>
+</body>
+</html>
