@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../jQuery/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="../JSProj.css">
+    <title>Project 7</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("#p7s2SquareRed").fadeIn();
+            $("#p7s2SquareGreen").fadeIn("slow");
+            $("#p7s2SquareBlue").fadeIn(3000);
+          });
+        });
+    </script>
+    <div class="center">
+        <h2>Project 7 Script 2</h2>
+        <p>Demonstrate fadeIn() with different parameters.</p>
+        <button>Click to fade in boxes</button>
+    </div>
+    <br><br>
+    <div id="p7s2SquareRed"></div><br>
+    <div id="p7s2SquareGreen"></div><br>
+    <div id="p7s2SquareBlue"></div>
+</body>
+</html>

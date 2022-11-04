@@ -112,3 +112,54 @@ footer {
 .buttonHolder {
     text-align: center;
 }
+
+#p7s2SquareRed {
+    width: 80px;
+    height: 80px;
+    display: none;
+    background-color: red;
+}
+
+#p7s2SquareGreen {
+    width: 80px;
+    height: 80px;
+    display: none;
+    background-color: green;
+}
+
+#p7s2SquareBlue {
+    width: 80px;
+    height: 80px;
+    display: none;
+    background-color: blue;
+}
+
+#p7s3SquareRed {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+}
+
+#p7s3SquareGreen {
+    width: 80px;
+    height: 80px;
+    background-color: green;
+}
+
+#p7s3SquareBlue {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+  
+#panel {
+    padding: 50px;
+    display: none;
+}

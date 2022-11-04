@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../jQuery/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="../JSProj.css">
+    <title>Project 7</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("#p7s3SquareRed").fadeOut();
+            $("#p7s3SquareGreen").fadeOut("slow");
+            $("#p7s3SquareBlue").fadeOut(3000);
+          });
+        });
+    </script>
+    <div class="center">
+        <h2>Project 7 Script 3</h2>
+        <p>Demonstrate fadeOut() with different parameters.</p>
+        <button>Click to fade out boxes</button>
+    </div>
+    <br><br>
+    <div id="p7s3SquareRed"></div><br>
+    <div id="p7s3SquareGreen"></div><br>
+    <div id="p7s3SquareBlue"></div>
+</body>
+</html>
