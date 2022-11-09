@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../jQuery/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="../JSProj.css">
+    <title>Project 7</title>
+    <script>
+        $(document).ready(function() {
+        $('.gallery img').each(function(i) {
+            var imgFile = $(this).attr('src');
+            var preloadImage = new Image();
+          var imgExt = /(\.\w{3,4}$)/;
+          preloadImage.src = imgFile.replace(imgExt,'_h$1');
+                
+            $(this).hover(
+                function() {
+                    $(this).attr('src', preloadImage.src);
+                },
+                function () {
+                var currentSource=$(this).attr('src');
+                    $(this).attr('src', imgFile);
+            }); 
+        }); 
+        
+        $('.gallery a').click(function(evt) {
+            //don't follow link
+             evt.preventDefault();
+             //get path to new image
+           var imgPath = $(this).attr('href');
+             //get reference to old image
+             var oldImage = $('.photo img');
+                         
+                 //create HTML for new image
+                 var newImage = $('<img src="' + imgPath +'">');
+                 //make new image invisible
+                 newImage.hide();
+                 //add to the #photo div
+                 $('.photo').prepend(newImage);
+                 //fade in new image
+                 newImage.fadeIn(1000);
+                 
+                 //fade out old image and remove from DOM
+                 oldImage.fadeOut(1000,function(){
+                 $(this).remove();
+                    });
+        }); // end click
+        $('.gallery a:first').click();
+        }); // end ready
+    </script>
+</head>
+<body>
+    <h2 class="center">Project 7 Script 6</h2>
+    <div class="gallery">
+        <a href="../JSimages/script7Images/large/slide01.jpg">
+            <img src="../JSimages/script7Images/small/slide01.jpg" width="70" height="70" alt="">
+        </a>
+        <a href="../JSimages/script7Images/large/slide02.jpg">
+            <img src="../JSimages/script7Images/small/slide02.jpg" width="70" height="70" alt="">
+        </a> 
+        <a href="../JSimages/script7Images/large/slide03.jpg">
+            <img src="../JSimages/script7Images/small/slide03.jpg" width="70" height="70" alt="">
+        </a> 
+        <a href="../JSimages/script7Images/large/slide04.jpg">
+            <img src="../JSimages/script7Images/small/slide04.jpg" width="70" height="70" alt="">
+        </a> 
+        <a href="../JSimages/script7Images/large/slide05.jpg">
+            <img src="../JSimages/script7Images/small/slide05.jpg" width="70" height="70" alt="">
+        </a> 
+        <a href="../JSimages/script7Images/large/slide06.jpg">
+            <img src="../JSimages/script7Images/small/slide06.jpg" width="70" height="70" alt="">
+        </a> 
+        <a href="../JSimages/script7Images/large/slide07.jpg">
+            <img src="../JSimages/script7Images/small/slide07.jpg" width="70" height="70" alt="">
+        </a> 
+        <a href="../JSimages/script7Images/large/slide08.jpg">
+            <img src="../JSimages/script7Images/small/slide08.jpg" width="70" height="70" alt="">
+        </a> 
+    </div>
+    <div class="photo"></div>
+    <div class="bottom"><br>
+        <a href="menu.htm">Project 7 Menu</a><br>
+        <a href="../default.htm">COP2830 Home</a>
+    </div>
+</body>
+</html>

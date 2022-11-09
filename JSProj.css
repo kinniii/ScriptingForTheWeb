@@ -163,3 +163,34 @@ footer {
     padding: 50px;
     display: none;
 }
+
+.gallery {
+	float: left;
+	width: 90px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	border-right: white 1px dotted;	
+}
+
+.gallery img {
+	display: inline-block;
+	margin: 0 0 0 0;
+	border: 1px solid rgb(0,0,0);
+}
+.photo {
+	float: left;
+	margin-top: 0px;
+	margin-left: 10px;	
+	position: relative;
+}
+.photo img {
+	position: absolute;	
+}
+
+.bottom {
+    position: fixed;
+    bottom: 100px;
+    left: 300px;
+    text-align: center;
+}
